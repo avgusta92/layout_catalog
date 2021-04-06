@@ -1,20 +1,31 @@
 .product-card {
-  font-size: 11px;
-  font-weight: 400;
-
   width: $card-width;
-  padding: 29px 14px 14px;
+  padding: 14px;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   &__image {
     width: 160px;
     height: 134px;
 
-    margin: 0 auto 45px;
+    margin: 15px auto 45px;
+
+    transition: transform 400ms;
+
+    &:hover {
+      box-sizing: initial;
+      padding: 12px 0;
+      margin-top: 0;
+      margin-bottom: 30px;
+
+      transform: scale(1.2);
+
+      border: 3px solid $card-border-color;
+    }
   }
 
   &__title {
@@ -22,7 +33,7 @@
     font-weight: 500;
     line-height: 15px;
 
-    margin: 0 0 6px;
+    margin: 0 auto 6px;
   }
 
   &__feedbacks {
@@ -63,6 +74,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    transition: 0.8s;
 
     &:hover {
       background-color: white;
