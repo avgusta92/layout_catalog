@@ -1,6 +1,6 @@
 .product-card {
   width: $card-width;
-  padding: 29px 14px 14px;
+  padding: 14px;
   border-radius: 5px;
   border: 1px solid $card-border-color;
 
@@ -9,20 +9,20 @@
   justify-content: center;
 
   &__image {
-    box-sizing: content-box;
     width: 160px;
     height: 134px;
 
-    margin: 0 auto 45px;
+    margin: 15px auto 45px;
 
     transition: transform 400ms;
 
     &:hover {
-      padding: 6px 0;
-      margin: 0 auto 27px;
+      box-sizing: initial;
+      padding: 12px 0;
+      margin-top: 0;
+      margin-bottom: 30px;
 
       transform: scale(1.2);
-      transform-origin: bottom center;
 
       border: 3px solid $card-border-color;
     }
