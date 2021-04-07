@@ -1,20 +1,29 @@
 .product-card {
-  font-size: 11px;
-  font-weight: 400;
-
   width: $card-width;
-  padding: 29px 14px 14px;
+  padding: 14px;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   &__image {
     width: 160px;
     height: 134px;
 
-    margin: 0 auto 45px;
+    margin: 15px auto 45px;
+
+    transition: transform 400ms;
+
+    &:hover {
+      box-sizing: initial;
+      padding: 12px 0;
+      margin-top: 0;
+      margin-bottom: 30px;
+
+      transform: scale(1.2);
+
+      border: 3px solid $card-border-color;
+    }
   }
 
   &__title {
@@ -22,27 +31,28 @@
     font-weight: 500;
     line-height: 15px;
 
-    margin: 0 0 6px;
+    margin: 0 auto 6px;
   }
 
   &__feedbacks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: 15px 0 20px;
   }
 
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
+  &__counter {
+    text-align: end;
+    line-height: 15px;
+  }
 
+  &__price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
   }
 
   &__price-value {
+    text-align: end;
     font-weight: 600;
     font-size: 16px;
   }
@@ -59,10 +69,11 @@
     text-transform: uppercase;
     line-height: 17px;
 
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    text-align: center;
+
+    transition: 0.8s;
 
     &:hover {
       background-color: white;
