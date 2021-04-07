@@ -1,12 +1,9 @@
 .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat($columns, $card-width);
+  gap: 50px $card-gap;
 
-  margin-top: 50px;
-  width: contentWidth($card-width, $card-gap, $columns);
+  padding-top: 50px;
 
-  &__product-card {
-    margin-bottom: 50px;
-  }
 }
